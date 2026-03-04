@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicoterapia Breve — Linha do Tempo</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Noto+Naskh+Arabic:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+        <button class="lang-btn" id="langBtn" onclick="openLangPopup()">
+            <span class="flag" id="currentFlag">🇧🇷</span>
+            <span id="currentCode">PT</span>
+        </button>
+        <button class="ctrl-btn" id="themeBtn" onclick="toggleTheme()">☀ <span id="themeLabel">Claro</span></button>
+    </div>
+
+    <!-- LANGUAGE POPUP -->
+    <div class="lang-overlay" id="langOverlay" onclick="closeLangOnOverlay(event)">
+        <div class="lang-popup">
+            <button class="close-btn" onclick="closeLangPopup()">✕</button>
+            <h3 id="popupTitle">Selecionar idioma</h3>
+            <div class="lang-grid">
+                <button class="lang-option active" onclick="setLang('pt')" id="opt-pt">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                            <path fill="#009B3A"
+                                d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z"></path>
+                            <path fill="#FEDF01" d="M32.728 18L18 29.124L3.272 18L18 6.875z"></path>
+                            <circle fill="#002776" cx="17.976" cy="17.924" r="6.458"></circle>
+                            <path fill="#CBE9D4"
+                                d="M12.277 14.887a6.406 6.406 0 0 0-.672 2.023c3.995-.29 9.417 1.891 11.744 4.595c.402-.604.7-1.28.883-2.004c-2.872-2.808-7.917-4.63-11.955-4.614z">
+                            </path>
+                            <path fill="#88C9F9" d="M12 18.233h1v1h-1zm1 2h1v1h-1z"></path>
+                            <path fill="#55ACEE"
+                                d="M15 18.233h1v1h-1zm2 1h1v1h-1zm4 2h1v1h-1zm-3 1h1v1h-1zm3-6h1v1h-1z"></path>
+                            <path fill="#3B88C3" d="M19 20.233h1v1h-1z"></path>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">Português</span><span class="lang-native">PT ·
+                            Brazil</span></div>
+                </button>
+                <button class="lang-option" onclick="setLang('en')" id="opt-en">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="utf-8"?>
+
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="20px" height="20px" viewBox="0 -4 28 28" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_503_3486)">
+                                <rect width="28" height="20" rx="2" fill="white" />
+                                <mask id="mask0_503_3486" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                                    width="28" height="20">
+                                    <rect width="28" height="20" rx="2" fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_503_3486)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M28 0H0V1.33333H28V0ZM28 2.66667H0V4H28V2.66667ZM0 5.33333H28V6.66667H0V5.33333ZM28 8H0V9.33333H28V8ZM0 10.6667H28V12H0V10.6667ZM28 13.3333H0V14.6667H28V13.3333ZM0 16H28V17.3333H0V16ZM28 18.6667H0V20H28V18.6667Z"
+                                        fill="#D02F44" />
+                                    <rect width="12" height="9.33333" fill="#46467F" />
+                                    <g filter="url(#filter0_d_503_3486)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M2.66665 1.99999C2.66665 2.36818 2.36817 2.66666 1.99998 2.66666C1.63179 2.66666 1.33331 2.36818 1.33331 1.99999C1.33331 1.63181 1.63179 1.33333 1.99998 1.33333C2.36817 1.33333 2.66665 1.63181 2.66665 1.99999ZM5.33331 1.99999C5.33331 2.36818 5.03484 2.66666 4.66665 2.66666C4.29846 2.66666 3.99998 2.36818 3.99998 1.99999C3.99998 1.63181 4.29846 1.33333 4.66665 1.33333C5.03484 1.33333 5.33331 1.63181 5.33331 1.99999ZM7.33331 2.66666C7.7015 2.66666 7.99998 2.36818 7.99998 1.99999C7.99998 1.63181 7.7015 1.33333 7.33331 1.33333C6.96512 1.33333 6.66665 1.63181 6.66665 1.99999C6.66665 2.36818 6.96512 2.66666 7.33331 2.66666ZM10.6666 1.99999C10.6666 2.36818 10.3682 2.66666 9.99998 2.66666C9.63179 2.66666 9.33331 2.36818 9.33331 1.99999C9.33331 1.63181 9.63179 1.33333 9.99998 1.33333C10.3682 1.33333 10.6666 1.63181 10.6666 1.99999ZM3.33331 3.99999C3.7015 3.99999 3.99998 3.70152 3.99998 3.33333C3.99998 2.96514 3.7015 2.66666 3.33331 2.66666C2.96512 2.66666 2.66665 2.96514 2.66665 3.33333C2.66665 3.70152 2.96512 3.99999 3.33331 3.99999ZM6.66665 3.33333C6.66665 3.70152 6.36817 3.99999 5.99998 3.99999C5.63179 3.99999 5.33331 3.70152 5.33331 3.33333C5.33331 2.96514 5.63179 2.66666 5.99998 2.66666C6.36817 2.66666 6.66665 2.96514 6.66665 3.33333ZM8.66665 3.99999C9.03484 3.99999 9.33331 3.70152 9.33331 3.33333C9.33331 2.96514 9.03484 2.66666 8.66665 2.66666C8.29846 2.66666 7.99998 2.96514 7.99998 3.33333C7.99998 3.70152 8.29846 3.99999 8.66665 3.99999ZM10.6666 4.66666C10.6666 5.03485 10.3682 5.33333 9.99998 5.33333C9.63179 5.33333 9.33331 5.03485 9.33331 4.66666C9.33331 4.29847 9.63179 3.99999 9.99998 3.99999C10.3682 3.99999 10.6666 4.29847 10.6666 4.66666ZM7.33331 5.33333C7.7015 5.33333 7.99998 5.03485 7.99998 4.66666C7.99998 4.29847 7.7015 3.99999 7.33331 3.99999C6.96512 3.99999 6.66665 4.29847 6.66665 4.66666C6.66665 5.03485 6.96512 5.33333 7.33331 5.33333ZM5.33331 4.66666C5.33331 5.03485 5.03484 5.33333 4.66665 5.33333C4.29846 5.33333 3.99998 5.03485 3.99998 4.66666C3.99998 4.29847 4.29846 3.99999 4.66665 3.99999C5.03484 3.99999 5.33331 4.29847 5.33331 4.66666ZM1.99998 5.33333C2.36817 5.33333 2.66665 5.03485 2.66665 4.66666C2.66665 4.29847 2.36817 3.99999 1.99998 3.99999C1.63179 3.99999 1.33331 4.29847 1.33331 4.66666C1.33331 5.03485 1.63179 5.33333 1.99998 5.33333ZM3.99998 5.99999C3.99998 6.36819 3.7015 6.66666 3.33331 6.66666C2.96512 6.66666 2.66665 6.36819 2.66665 5.99999C2.66665 5.6318 2.96512 5.33333 3.33331 5.33333C3.7015 5.33333 3.99998 5.6318 3.99998 5.99999ZM5.99998 6.66666C6.36817 6.66666 6.66665 6.36819 6.66665 5.99999C6.66665 5.6318 6.36817 5.33333 5.99998 5.33333C5.63179 5.33333 5.33331 5.6318 5.33331 5.99999C5.33331 6.36819 5.63179 6.66666 5.99998 6.66666ZM9.33331 5.99999C9.33331 6.36819 9.03484 6.66666 8.66665 6.66666C8.29846 6.66666 7.99998 6.36819 7.99998 5.99999C7.99998 5.6318 8.29846 5.33333 8.66665 5.33333C9.03484 5.33333 9.33331 5.6318 9.33331 5.99999ZM9.99998 8C10.3682 8 10.6666 7.70152 10.6666 7.33333C10.6666 6.96514 10.3682 6.66666 9.99998 6.66666C9.63179 6.66666 9.33331 6.96514 9.33331 7.33333C9.33331 7.70152 9.63179 8 9.99998 8ZM7.99998 7.33333C7.99998 7.70152 7.7015 8 7.33331 8C6.96512 8 6.66665 7.70152 6.66665 7.33333C6.66665 6.96514 6.96512 6.66666 7.33331 6.66666C7.7015 6.66666 7.99998 6.96514 7.99998 7.33333ZM4.66665 8C5.03484 8 5.33331 7.70152 5.33331 7.33333C5.33331 6.96514 5.03484 6.66666 4.66665 6.66666C4.29846 6.66666 3.99998 6.96514 3.99998 7.33333C3.99998 7.70152 4.29846 8 4.66665 8ZM2.66665 7.33333C2.66665 7.70152 2.36817 8 1.99998 8C1.63179 8 1.33331 7.70152 1.33331 7.33333C1.33331 6.96514 1.63179 6.66666 1.99998 6.66666C2.36817 6.66666 2.66665 6.96514 2.66665 7.33333Z"
+                                            fill="url(#paint0_linear_503_3486)" />
+                                    </g>
+                                </g>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_503_3486" x="1.33331" y="1.33333" width="9.33331" height="7.66667"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feColorMatrix in="SourceAlpha" type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                    <feOffset dy="1" />
+                                    <feColorMatrix type="matrix"
+                                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+                                    <feBlend mode="normal" in2="BackgroundImageFix"
+                                        result="effect1_dropShadow_503_3486" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_503_3486"
+                                        result="shape" />
+                                </filter>
+                                <linearGradient id="paint0_linear_503_3486" x1="1.33331" y1="1.33333"
+                                    x2="1.33331" y2="7.99999" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="1" stop-color="#F0F0F0" />
+                                </linearGradient>
+                                <clipPath id="clip0_503_3486">
+                                    <rect width="28" height="20" rx="2" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">English</span><span class="lang-native">EN ·
+                            United
+                            States</span></div>
+                </button>
+                <button class="lang-option" onclick="setLang('es')" id="opt-es">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo
+Mixer Tools -->
+                        <svg width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                            <path fill="#C60A1D"
+                                d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z"></path>
+                            <path fill="#FFC400" d="M0 12h36v12H0z"></path>
+                            <path fill="#EA596E" d="M9 17v3a3 3 0 1 0 6 0v-3H9z"></path>
+                            <path fill="#F4A2B2" d="M12 16h3v3h-3z"></path>
+                            <path fill="#DD2E44" d="M9 16h3v3H9z"></path>
+                            <ellipse fill="#EA596E" cx="12" cy="14.5" rx="3" ry="1.5">
+                            </ellipse>
+                            <ellipse fill="#FFAC33" cx="12" cy="13.75" rx="3" ry=".75">
+                            </ellipse>
+                            <path fill="#99AAB5" d="M7 16h1v7H7zm9 0h1v7h-1z"></path>
+                            <path fill="#66757F" d="M6 22h3v1H6zm9 0h3v1h-3zm-8-7h1v1H7zm9 0h1v1h-1z"></path>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">Español</span><span class="lang-native">ES ·
+                            Spain</span></div>
+                </button>
+                <button class="lang-option" onclick="setLang('de')" id="opt-de">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo
+Mixer Tools -->
+                        <svg width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                            <path fill="#FFCD05" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z"></path>
+                            <path fill="#ED1F24" d="M0 14h36v9H0z"></path>
+                            <path fill="#141414" d="M32 5H4a4 4 0 0 0-4 4v5h36V9a4 4 0 0 0-4-4z"></path>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">Deutsch</span><span class="lang-native">DE ·
+                            Germany</span></div>
+                </button>
+                <button class="lang-option" onclick="setLang('tr')" id="opt-tr">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg height="20px" width="20px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 512 512" xml:space="preserve">
+                            <path style="fill:#ED1F34;" d="M8.258,126.624v258.753c0,19.763,16.022,35.785,35.785,35.785h423.914
+ c19.763,0,35.785-16.022,35.785-35.785V126.624c0-19.763-16.022-35.785-35.785-35.785H44.043
+ C24.28,90.839,8.258,106.86,8.258,126.624z" />
+                            <g>
+                                <path style="fill:#FFFFFF;"
+                                    d="M210.305,337.677c-45.109,0-81.677-36.568-81.677-81.677s36.568-81.677,81.677-81.677
+  c22.245,0,42.402,8.906,57.133,23.33c-19.526-31.397-54.323-52.311-94.019-52.311c-61.115,0-110.658,49.543-110.658,110.658
+  s49.543,110.658,110.658,110.658c39.696,0,74.492-20.915,94.019-52.312C252.708,328.771,232.55,337.677,210.305,337.677z" />
+                                <polygon style="fill:#FFFFFF;"
+                                    points="277.628,256 309.847,243.659 311.627,209.204 333.32,236.033 366.638,227.079 347.826,256 
+		366.638,284.921 333.32,275.967 311.627,302.796 309.847,268.341 	" />
+                            </g>
+                            <g>
+                                <path style="fill:#121B21;" d="M373.32,222.225c-2.012-2.768-5.522-4.01-8.824-3.122l-28.132,7.56l-18.315-22.651
+  c-2.15-2.66-5.718-3.719-8.974-2.661c-3.254,1.057-5.519,4.011-5.695,7.428l-1.503,29.092l-27.202,10.418
+  c-3.194,1.223-5.304,4.291-5.304,7.712s2.11,6.489,5.304,7.712l27.202,10.418l1.503,29.091c0.177,3.416,2.442,6.371,5.695,7.428
+  c0.839,0.273,1.699,0.405,2.551,0.405c2.45,0,4.826-1.092,6.423-3.066l18.315-22.651l28.132,7.56
+  c3.301,0.887,6.813-0.353,8.824-3.122c2.011-2.768,2.106-6.489,0.241-9.357L357.678,256l15.883-24.419
+  C375.426,228.713,375.33,224.993,373.32,222.225z M340.904,260.502l7.057,10.848l-12.498-3.358
+  c-3.152-0.846-6.511,0.243-8.564,2.782l-8.137,10.063l-0.667-12.923c-0.168-3.261-2.243-6.118-5.293-7.286l-12.084-4.629
+  l12.084-4.629c3.05-1.168,5.124-4.024,5.293-7.286l0.667-12.923l8.137,10.063c2.053,2.539,5.415,3.627,8.564,2.782l12.498-3.358
+  l-7.057,10.848C339.124,254.235,339.124,257.765,340.904,260.502z" />
+                                <path style="fill:#121B21;" d="M272.605,307.905c-3.261-2.615-7.961-2.384-10.946,0.542c-13.81,13.525-32.048,20.972-51.354,20.972
+  c-34.701,0-64.946-24.63-71.915-58.564c-0.917-4.467-5.281-7.343-9.75-6.428c-4.468,0.917-7.345,5.283-6.428,9.75
+  c8.539,41.579,45.588,71.757,88.094,71.757c4.804,0,9.554-0.377,14.216-1.115c-15.252,8.787-32.767,13.581-51.102,13.581
+  c-56.463,0-102.4-45.937-102.4-102.4s45.937-102.4,102.4-102.4c18.335,0,35.851,4.795,51.102,13.581
+  c-4.662-0.739-9.412-1.115-14.216-1.115c-42.506,0-79.555,30.178-88.094,71.757c-0.918,4.468,1.96,8.833,6.428,9.75
+  c4.463,0.916,8.833-1.96,9.75-6.428c6.969-33.934,37.213-58.564,71.915-58.564c19.306,0,37.544,7.448,51.354,20.972
+  c2.986,2.923,7.685,3.156,10.946,0.542c3.259-2.615,4.052-7.254,1.844-10.803c-21.888-35.195-59.657-56.207-101.03-56.207
+  c-65.57,0-118.916,53.346-118.916,118.916s53.346,118.916,118.916,118.916c41.373,0,79.141-21.013,101.03-56.209
+  C276.657,315.159,275.866,310.52,272.605,307.905z" />
+                                <path style="fill:#121B21;" d="M468.324,82.581H43.676C19.593,82.581,0,102.173,0,126.256v259.487
+  c0,24.084,19.593,43.676,43.676,43.676h424.648c24.083,0,43.675-19.593,43.675-43.676V126.256
+  C512,102.173,492.407,82.581,468.324,82.581z M495.484,385.743c0,14.977-12.183,27.16-27.16,27.16H43.676
+  c-14.977,0-27.16-12.183-27.16-27.16V126.256c0-14.976,12.183-27.159,27.16-27.159h424.648c14.976,0,27.159,12.183,27.159,27.159
+  V385.743z" />
+                            </g>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">Türkçe</span><span class="lang-native">TR ·
+                            Turkey</span></div>
+                </button>
+                <button class="lang-option" onclick="setLang('ar')" id="opt-ar">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <!DOCTYPE svg
+                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px"
+                            viewBox="0 0 800 800" enable-background="new 0 0 800 800" xml:space="preserve">
+                            <g>
+                                <path fill="#FFFFFF" d="M323.975,326.882h-40.104v146.236h490.322V326.882H375.587c-7.126,0-12.903-5.777-12.903-12.903h-25.807
+  C336.877,321.104,331.101,326.882,323.975,326.882z" />
+                                <path fill="#259245" d="M335.877,314.979v-1c0-6.563-5.339-11.903-11.902-11.903h-41.104V153.839h492.322v148.236H375.587
+  c-6.563,0-11.903,5.34-11.903,11.903v1H335.877z" />
+                                <path fill="#259245" d="M283.871,301.075h40.104c7.126,0,12.902,5.777,12.902,12.903h25.807c0-7.126,5.777-12.903,12.903-12.903
+  h398.606V154.839H283.871V301.075z" />
+                                <rect x="282.871" y="497.925" fill="#333333" width="492.322" height="148.236" />
+                                <rect x="283.871" y="498.925" fill="#333333" width="490.322" height="146.236" />
+                                <rect x="24.807" y="153.839" fill="#ED1F34" width="234.258" height="492.322" />
+                                <rect x="25.807" y="154.839" fill="#ED1F34" width="232.258" height="490.322" />
+                                <path d="M787.097,129.032H12.903C5.777,129.032,0,134.81,0,141.936v516.129c0,7.126,5.777,12.903,12.903,12.903h774.193
+  c7.126,0,12.903-5.777,12.903-12.903V141.936C800,134.81,794.223,129.032,787.097,129.032z M25.807,154.839h232.258v490.322H25.807
+  V154.839z M774.193,301.075H375.587c-7.126,0-12.903,5.777-12.903,12.903s5.777,12.903,12.903,12.903h398.606v146.236H283.871
+  V326.882h40.104c7.126,0,12.902-5.777,12.902-12.903s-5.776-12.903-12.902-12.903h-40.104V154.839h490.322V301.075z
+  M283.871,498.925h490.322v146.236H283.871V498.925z" />
+                            </g>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">العربية</span><span class="lang-native">AR ·
+                            UAE</span></div>
+                </button>
+                <button class="lang-option" onclick="setLang('fa')" id="opt-fa">
+                    <span class="flag-lg">
+                        <?xml version="1.0" encoding="utf-8"?>
+
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                            class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet">
+                            <path fill="#DA0001" d="M0 27a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-4H0v4z">
+                            </path>
+                            <path fill="#EEE" d="M0 13h36v10H0z">
+                            </path>
+                            <path fill="#239F40" d="M36 13V9a4 4 0 0 0-4-4H4a4 4 0 0 0-4 4v4h36z">
+                            </path>
+                            <path fill="#E96667" d="M0 23h36v1H0z">
+                            </path>
+                            <g fill="#BE1931">
+                                <path
+                                    d="M19.465 14.969c.957.49 3.038 2.953.798 5.731c1.391-.308 3.162-4.408-.798-5.731zm-2.937 0c-3.959 1.323-2.189 5.423-.798 5.731c-2.24-2.778-.159-5.241.798-5.731zm1.453-.143c.04.197 1.101.436.974-.573c-.168.408-.654.396-.968.207c-.432.241-.835.182-.988-.227c-.148.754.587.975.982.593z">
+                                </path>
+                                <path
+                                    d="M20.538 17.904c-.015-1.248-.677-2.352-1.329-2.799c.43.527 1.752 3.436-.785 5.351l.047-5.097l-.475-.418l-.475.398l.08 5.146l-.018-.015c-2.563-1.914-1.233-4.837-.802-5.365c-.652.447-1.315 1.551-1.329 2.799c-.013 1.071.477 2.243 1.834 3.205a6.375 6.375 0 0 1-1.678.201c.464.253 1.34.192 2.007.131l.001.068l.398.437l.4-.455v-.052c.672.062 1.567.129 2.039-.128a6.302 6.302 0 0 1-1.732-.213c1.344-.961 1.83-2.127 1.817-3.194z">
+                                </path>
+                            </g>
+                            <path fill="#7BC58C" d="M0 12h36v1H0z">
+                            </path>
+                        </svg>
+                    </span>
+                    <div class="lang-info"><span class="lang-name">فارسی</span><span class="lang-native">FA ·
+                            Iran</span></div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <span class="page-label" data-i18n="label"></span>
+        <h1 data-i18n="title"></h1>
+        <p class="subtitle" data-i18n="subtitle"></p>
+        <div class="meta-row">
+            <div class="meta-item"><span data-i18n="metaSources"></span><span>Lemgruber · Hegenberg</span></div>
+            <div class="meta-item"><span data-i18n="metaSpan"></span><span>1900 – 1997</span></div>
+            <div class="meta-item"><span data-i18n="metaGen"></span><span data-i18n="metaGenVal"></span></div>
+        </div>
+    </header>
+
+    <!-- LEGEND -->
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#7a9bb5"></div><span data-i18n="genPre"></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#c0614e"></div><span data-i18n="gen1"></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#6dab63"></div><span data-i18n="gen2"></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#c9a84c"></div><span data-i18n="gen3"></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#9b72c8"></div><span data-i18n="gen4"></span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#3a9a9a"></div><span data-i18n="genLatam"></span>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline" id="timeline"></div>
+
+    <!-- SYNTHESIS -->
+    <div class="synthesis">
+        <div class="synthesis-inner">
+            <h2 data-i18n="arcTitle"></h2>
+            <ul class="arc-list" id="arcList"></ul>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
